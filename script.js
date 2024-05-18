@@ -13,7 +13,12 @@ for( let a = 0; a<16*16;a++){
    
     container.appendChild(boxs[a]);
     box.addEventListener("mouseover",()=>{
-        box.style.background = "green";
+        let color = "#";
+        let letters = '0123456789ABCDEF';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+        box.style.background = color;
   
         
     })}
@@ -37,7 +42,12 @@ button.addEventListener("click", ()=> {
         box.style.margin = (640/boxes)/4 + "px";
         container.appendChild(boxs[a]);
         box.addEventListener("mouseover",()=>{
-            box.style.background = "green";
+            let color = "#";
+            let letters = '0123456789ABCDEF';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+              }
+            box.style.background = color;
 
         })}
 })
